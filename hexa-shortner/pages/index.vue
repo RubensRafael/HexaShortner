@@ -72,13 +72,6 @@ export default {
       loading: false
     }
   },
-  computed: {
-    // a computed getter
-    publishedBooksMessage() {
-      // `this` points to the component instance
-      return this.url > 0 ? 'Yes' : 'No'
-    }
-  },
   methods:{
     handleSubmit : function(e){
       
@@ -87,7 +80,7 @@ export default {
       this.loading = true
       this.warn = ''
       this.success = ''
-      fetch('https://hexa-shortner.herokuapp.com/',{
+      fetch('http://www.hxshrt.tk/',{
         method:'POST',
         body:JSON.stringify({"url":this.url}),
         headers: {
@@ -98,7 +91,7 @@ export default {
           this.warn = "Digite um URL válida"
         }else{
           const result = await res.json().then((data)=>data.result)
-          this.success = "https://hexa-shortner.herokuapp.com/" + result
+          this.success = "http://www.hxshrt.tk/" + result
         }
       })
       this.loading = false
