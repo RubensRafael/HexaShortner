@@ -80,7 +80,7 @@ export default {
       this.loading = true
       this.warn = ''
       this.success = ''
-      fetch('http://www.hxshrt.tk/',{
+      fetch('http://hxshrt.tk/',{
         method:'POST',
         body:JSON.stringify({"url":this.url}),
         headers: {
@@ -91,7 +91,7 @@ export default {
           this.warn = "Digite um URL válida"
         }else{
           const result = await res.json().then((data)=>data.result)
-          this.success = "http://www.hxshrt.tk/" + result
+          this.success = "http://hxshrt.tk/" + result
         }
       })
       this.loading = false
