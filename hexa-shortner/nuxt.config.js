@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'hexa-shortner',
+    title: 'Hexa Shortner: Less is More',
     htmlAttrs: {
       lang: 'en'
     },
