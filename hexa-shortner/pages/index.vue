@@ -80,7 +80,7 @@ export default {
       this.loading = true
       this.warn = ''
       this.success = ''
-      fetch('https://hxshrt.tk/',{
+      fetch('https://hexa-shortner.herokuapp.com/',{
         method:'POST',
         body:JSON.stringify({"url":this.url}),
         headers: {
